@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0b0b0b;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+:root {
+  --accent: #7A1F3D; /* primary maroon */
+  --accent-2: #B8355A; /* secondary red */
+  --muted: #A0A0A0; /* muted text */
+  --panel-bg: #121212; /* surfaces */
+  --card-bg: #1C1C1C;
+  --border: #222222;
+}
+
+
+.font-signature {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #505050;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A0A0A0;
+}

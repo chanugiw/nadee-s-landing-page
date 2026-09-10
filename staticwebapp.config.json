@@ -1,0 +1,35 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/assets/*",
+      "/favicon.ico",
+      "/robots.txt",
+      "/manifest.json",
+      "/images/*",
+      "/public/*"
+    ]
+  },
+  "routes": [
+    {
+      "route": "/contact",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/about",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/experience",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/projects",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/research",
+      "rewrite": "/index.html"
+    }
+  ]
+}
