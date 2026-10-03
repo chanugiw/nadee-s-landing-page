@@ -140,61 +140,84 @@ export const Contact = () => {
 
   if (state.succeeded) {
     return (
-      <SectionWrapper id="contact" title="Contact">
-        <div className="text-center py-12">
-          <h4 className="text-white text-2xl font-bold mb-4">Message Sent Successfully!</h4>
-          <p className="text-[#A0A0A0]">Thank you for reaching out. I will get back to you as soon as possible.</p>
+      <section id="contact" className="mx-2 md:mx-4 my-4 bg-[#f7f7f7] px-6 py-16 md:px-10 lg:px-14 rounded-[30px] shadow-2xl max-w-[97%]">
+        <div className="mx-auto max-w-3xl text-center py-8">
+          <h4 className="text-[#17181d] text-3xl font-black tracking-[-0.05em] mb-4">Message Sent Successfully!</h4>
+          <p className="text-[#485264]">Thank you for reaching out. I will get back to you as soon as possible.</p>
         </div>
-      </SectionWrapper>
+      </section>
     );
   }
 
   return (
-    <SectionWrapper id="contact" title="Contact">
-      <div className="max-w-xl space-y-6">
-        <p className="text-base text-[#A0A0A0]">
-          Let's collaborate to align your audience intelligence processes with your digital growth strategies.
-          <br /><br />
-          You can email me at <a href="mailto:info@nadeesenanayake.com" className="text-white underline">info@nadeesenanayake.com</a>
-          <br />
-          or call <a href="tel:+94707803698" className="text-white underline">0707803698</a>
-        </p>
+    <section id="contact" className="mx-2 md:mx-4 my-4 bg-[#f3f2f0] px-6 py-16 md:px-10 lg:px-14 rounded-[30px] shadow-[0_30px_70px_rgba(0,0,0,0.08)] max-w-[97%]">
+      <div className="mx-auto max-w-6xl grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="rounded-[28px] bg-[#111827] p-8 text-white shadow-[0_24px_60px_rgba(17,24,39,0.18)]">
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#d8d8d8] bg-white/10 px-3 py-1.5 text-[0.62rem] font-bold uppercase tracking-[0.24em] text-[#f4d5df]">
+            Strategic digital guidance
+          </div>
 
-        <a 
-          href="mailto:info@nadeesenanayake.com?subject=Website%20Enquiry" 
-          className="inline-block bg-[#25D366] text-black uppercase font-bold text-xs tracking-widest py-3 px-6 hover:bg-[#128C7E] hover:text-white transition-all duration-300 rounded-lg"
-        >
-          Send via Email
-        </a>
+          <h3 className="text-4xl font-black tracking-[-0.06em] text-white md:text-5xl">Let’s collaborate</h3>
 
-        {state.error && (
-          <div className="rounded-lg border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-200">
-            {state.error}
-          </div>
-        )}
+          <p className="mt-5 text-base leading-7 text-[#dfe6ef]">
+            Let’s align your audience intelligence processes with your digital growth strategies.
+          </p>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-xs uppercase tracking-widest text-[#A0A0A0] mb-2 font-semibold">Name</label>
-            <input type="text" name="name" required className="w-full bg-[#111] border border-[#333] p-3 text-white focus:outline-none focus:border-[#FFFFFF] transition-colors rounded-lg" />
+          <div className="mt-8 space-y-4 text-sm text-[#eff3f8]">
+            <p>
+              Email: <a href="mailto:info@nadeesenanayake.com" className="font-semibold underline underline-offset-4">info@nadeesenanayake.com</a>
+            </p>
+            <p>
+              Call: <a href="tel:+94707803698" className="font-semibold underline underline-offset-4">0707803698</a>
+            </p>
           </div>
-          <div>
-            <label className="block text-xs uppercase tracking-widest text-[#A0A0A0] mb-2 font-semibold">Email</label>
-            <input type="email" name="email" required className="w-full bg-[#111] border border-[#333] p-3 text-white focus:outline-none focus:border-[#FFFFFF] transition-colors rounded-lg" />
+
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <a
+              href="mailto:info@nadeesenanayake.com?subject=Website%20Enquiry"
+              className="inline-flex items-center gap-2 rounded-full bg-[#7A1F3D] px-5 py-3 text-[0.68rem] font-bold uppercase tracking-[0.18em] text-white shadow-[0_18px_32px_rgba(122,31,61,0.2)] transition-transform hover:-translate-y-0.5"
+            >
+              Send via Email
+            </a>
+            <a
+              href="tel:+94707803698"
+              className="inline-flex items-center gap-2 rounded-full border border-[#d5d8dd] bg-white px-5 py-3 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-[#202836]"
+            >
+              Call now
+            </a>
           </div>
-          <div>
-            <label className="block text-xs uppercase tracking-widest text-[#A0A0A0] mb-2 font-semibold">Message</label>
-            <textarea rows="4" name="message" required className="w-full bg-[#111] border border-[#333] p-3 text-white focus:outline-none focus:border-[#FFFFFF] transition-colors rounded-lg"></textarea>
-          </div>
-          <button 
-            type="submit" 
-            disabled={state.submitting}
-            className="w-full bg-[#FFFFFF] text-[#000000] uppercase font-bold text-xs tracking-widest py-4 hover:bg-[#333] hover:text-[#FFFFFF] transition-all duration-300 rounded-lg disabled:cursor-not-allowed disabled:opacity-70"
-          >
-            {state.submitting ? 'Sending...' : 'Send Message'}
-          </button>
-        </form>
+        </div>
+
+        <div className="rounded-[28px] border border-[#e2e5ea] bg-white p-6 md:p-8 shadow-[0_12px_25px_rgba(17,24,39,0.04)]">
+          {state.error && (
+            <div className="mb-5 rounded-lg border border-red-500/40 bg-red-500/10 px-4 py-3 text-sm text-red-700">
+              {state.error}
+            </div>
+          )}
+
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div>
+              <label className="mb-2 block text-[0.65rem] font-bold uppercase tracking-[0.22em] text-[#4b5467]">Name</label>
+              <input type="text" name="name" required className="w-full rounded-xl border border-[#dfe3ea] bg-[#f9fafb] p-3 text-[#1a1d22] outline-none transition focus:border-[#7A1F3D]" />
+            </div>
+            <div>
+              <label className="mb-2 block text-[0.65rem] font-bold uppercase tracking-[0.22em] text-[#4b5467]">Email</label>
+              <input type="email" name="email" required className="w-full rounded-xl border border-[#dfe3ea] bg-[#f9fafb] p-3 text-[#1a1d22] outline-none transition focus:border-[#7A1F3D]" />
+            </div>
+            <div>
+              <label className="mb-2 block text-[0.65rem] font-bold uppercase tracking-[0.22em] text-[#4b5467]">Message</label>
+              <textarea rows="5" name="message" required className="w-full rounded-xl border border-[#dfe3ea] bg-[#f9fafb] p-3 text-[#1a1d22] outline-none transition focus:border-[#7A1F3D]"></textarea>
+            </div>
+            <button
+              type="submit"
+              disabled={state.submitting}
+              className="w-full rounded-full bg-[#17181d] px-5 py-4 text-[0.68rem] font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#7A1F3D] disabled:cursor-not-allowed disabled:opacity-70"
+            >
+              {state.submitting ? 'Sending...' : 'Send Message'}
+            </button>
+          </form>
+        </div>
       </div>
-    </SectionWrapper>
+    </section>
   );
 };

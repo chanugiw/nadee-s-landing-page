@@ -11,15 +11,18 @@ const Hero = () => {
       <div className="relative z-10 flex min-h-[520px] items-center">
         <div className="mx-auto grid w-full max-w-7xl items-center gap-8 px-6 py-10 md:px-10 lg:grid-cols-[1.08fr_0.92fr] lg:px-16">
           <div className="max-w-[650px]">
-            <div className="mb-6 inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.24em] text-[#b56488]">
+            <div className="mb-6 inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.18em] text-[#b56488]">
               <span className="inline-block h-[1px] w-6 bg-[#b56488]" />
-              Where consumer intelligence meets digital business strategy
+              WHERE CONSUMER INTELLIGENCE MEETS DIGITAL BUSINESS STRATEGY
             </div>
 
-            <h1 className="text-[3.1rem] font-black leading-[0.88] tracking-[-0.07em] text-[#f3f3f3] md:text-[5rem] lg:text-[5.9rem]">
-              Transforming
+            <h1
+              className="max-w-[620px] text-[2.1rem] font-black leading-[0.82] tracking-[-0.05em] text-[#f3f3f3] sm:text-[2.6rem] md:text-[3.5rem] lg:text-[4.4rem]"
+              style={{ fontFamily: '"Plus Jakarta Sans", "Segoe UI", sans-serif', textWrap: 'balance' }}
+            >
+              <span className="block">Transforming</span>
               <span className="block text-[#e8e8e8]">Digital</span>
-              <span className="block">Conversations into</span>
+              <span className="block whitespace-normal">Conversations into</span>
               <span className="block">Business Growth</span>
             </h1>
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, PenTool, LineChart } from 'lucide-react';
 import WhatIDo from '../components/WhatIDo';
-import ProjectsExperiments from '../components/ProjectsExperiments';
 
 const iconRow = [
   { icon: TrendingUp, label: 'Performance Marketing' },
@@ -15,14 +14,11 @@ const AboutPage = () => {
     <main className="space-y-6">
       <section className="relative mx-2 md:mx-4 my-4 min-h-[85vh] bg-[#121212] rounded-3xl overflow-hidden shadow-2xl max-w-[97%] px-6 lg:px-16 py-16 flex items-center">
 
-        {/* Decorative maroon shapes */}
         <div className="absolute -right-24 -top-24 w-[420px] h-[420px] rounded-full bg-[#7A1F3D] opacity-90"></div>
         <div className="absolute right-10 top-0 w-64 h-full border-2 border-[#7A1F3D]/40 rounded-[60px]"></div>
         <div className="absolute right-0 bottom-10 w-40 h-40 rounded-full border border-[#333]"></div>
 
         <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-          {/* Left: Text content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -62,7 +58,6 @@ const AboutPage = () => {
             </div>
           </motion.div>
 
-          {/* Right: Portrait */}
           <motion.div
             className="relative flex justify-center lg:justify-end"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -78,15 +73,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* What I Do */}
       <WhatIDo />
-
-      {/* Projects & Experiments */}
-      <ProjectsExperiments />
-
-      {/* Remaining About page sections (Research & Insights,
-          Education & Certifications, stats, testimonial)
-          will go here once content is provided. */}
     </main>
   );
 };

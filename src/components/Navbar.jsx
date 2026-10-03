@@ -11,7 +11,7 @@ const Navbar = () => {
     { name: 'Home', route: '/' },
     { name: 'About', route: '/about' },
     { name: 'Consultation', route: '/contact' },
-    { name: 'Research', route: '/research', comingSoon: true },
+    { name: 'FAQ', route: '/faq' },
   ];
 
   useEffect(() => {
@@ -42,8 +42,13 @@ const Navbar = () => {
   return (
     <div className="sticky top-4 left-0 right-0 z-50 w-full px-4 md:px-8 lg:px-16">
       <nav className="bg-[#0d0d0d] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.35)] px-5 md:px-6 py-3.5 flex items-center justify-between border border-[#1f1f1f]">
-        <button onClick={goHome} className="flex items-center gap-2 text-white text-left">
-          <span className="text-[1.1rem] md:text-[1.35rem] font-black tracking-[0.12em] uppercase">Nadee</span>
+        <button onClick={goHome} className="flex items-center gap-3 text-white text-left shrink-0">
+          <img
+            src="/assets/ns-monogram.svg"
+            alt="Nadee Senanayake logo"
+            className="h-12 w-12 md:h-14 md:w-14 object-contain object-center bg-transparent rounded-none border-0 p-0"
+          />
+          <span className="text-[0.8rem] md:text-[0.95rem] font-black tracking-[0.18em] uppercase">Nadee</span>
         </button>
 
         <div className="hidden lg:flex items-center justify-center flex-1 gap-8">
@@ -54,9 +59,6 @@ const Navbar = () => {
               className="group text-[#d6d6d6] hover:text-white text-[10px] uppercase tracking-[0.16em] font-semibold transition-all duration-300 relative"
             >
               {link.name}
-              {link.comingSoon && (
-                <span className="ml-2 inline-block text-[8px] uppercase tracking-[0.12em] text-[#c9c9c9] opacity-70">Coming Soon</span>
-              )}
               <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#b86d96] transition-all duration-300 group-hover:w-full"></span>
             </button>
           ))}
@@ -64,7 +66,7 @@ const Navbar = () => {
 
         <button
           onClick={() => handleNav('/contact')}
-          className="hidden md:inline-flex items-center justify-center px-4 py-2 rounded-full bg-[#3f67ff] text-[10px] uppercase tracking-[0.16em] font-bold text-white shadow-lg shadow-[#3f67ff]/20 transition-transform hover:scale-[1.02]"
+          className="hidden md:inline-flex items-center justify-center px-4 py-2 rounded-full bg-[#7A1F3D] text-[10px] uppercase tracking-[0.16em] font-bold text-white shadow-lg shadow-[#7A1F3D]/20 transition-transform hover:scale-[1.02]"
         >
           Book Now
         </button>

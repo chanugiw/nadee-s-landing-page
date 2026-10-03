@@ -85,7 +85,9 @@ const Footer = () => {
           {/* Social icons */}
           <div className="flex items-center gap-3 mt-5">
             <a
-              href="#"
+              href="https://www.linkedin.com/in/nadee-senanayake/"
+              target="_blank"
+              rel="noreferrer"
               aria-label="LinkedIn"
               className="w-9 h-9 rounded-full flex items-center justify-center transition-colors"
               style={{ color: '#0A66C2' }}
@@ -93,7 +95,9 @@ const Footer = () => {
               <LinkedinIcon />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noreferrer"
               aria-label="Instagram"
               className="w-9 h-9 rounded-full flex items-center justify-center transition-colors"
               style={{ color: '#E1306C' }}
