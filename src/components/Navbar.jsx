@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { BriefcaseBusiness, FolderKanban, Home, Info, Menu, MessageSquareText, X } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
@@ -8,10 +8,10 @@ const Navbar = () => {
   const location = useLocation();
 
   const navLinks = [
-    { name: 'Home', route: '/' },
-    { name: 'About', route: '/about' },
-    { name: 'Consultation', route: '/contact' },
-    { name: 'FAQ', route: '/faq' },
+    { name: 'Home', route: '/', icon: Home },
+    { name: 'About', route: '/about', icon: Info },
+    { name: 'Consultation', route: '/contact', icon: MessageSquareText },
+    { name: 'FAQ', route: '/faq', icon: BriefcaseBusiness },
   ];
 
   useEffect(() => {
@@ -41,48 +41,56 @@ const Navbar = () => {
 
   return (
     <div className="sticky top-4 left-0 right-0 z-50 w-full px-4 md:px-8 lg:px-16">
-      <nav className="bg-[#0d0d0d] rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.35)] px-5 md:px-6 py-3.5 flex items-center justify-between border border-[#1f1f1f]">
-        <button onClick={goHome} className="flex items-center gap-3 text-white text-left shrink-0">
-          <img
-            src="/assets/ns-monogram.svg"
-            alt="Nadee Senanayake logo"
-            className="h-12 w-12 md:h-14 md:w-14 object-contain object-center bg-transparent rounded-none border-0 p-0"
-          />
-          <span className="text-[0.8rem] md:text-[0.95rem] font-black tracking-[0.18em] uppercase">Nadee</span>
+      <nav className="flex items-center justify-between rounded-[22px] border border-[#e5e5e5] bg-[#f5f3f1] px-4 py-3 shadow-[0_10px_25px_rgba(17,24,39,0.06)] md:px-6">
+        <button onClick={goHome} className="flex shrink-0 items-center gap-3 text-left text-[#17181d]">
+          <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-[8px] border border-[#d6d1ce] bg-[#0e0e10] p-1 shadow-inner md:h-12 md:w-12">
+            <img
+              src="/assets/ns-monogram.svg"
+              alt="Nadee Senanayake logo"
+              className="h-full w-full object-contain object-center"
+            />
+          </div>
+          <div className="leading-none">
+            <div className="text-[0.5rem] font-black tracking-[0.26em] text-[#17181d] md:text-[0.56rem]">NADEE</div>
+            <div className="text-[0.5rem] font-black tracking-[0.26em] text-[#17181d] md:text-[0.56rem]">SENANAYAKE</div>
+          </div>
         </button>
 
-        <div className="hidden lg:flex items-center justify-center flex-1 gap-8">
-          {navLinks.map((link) => (
-            <button
-              key={link.route}
-              onClick={() => handleNav(link.route)}
-              className="group text-[#d6d6d6] hover:text-white text-[10px] uppercase tracking-[0.16em] font-semibold transition-all duration-300 relative"
-            >
-              {link.name}
-              <span className="absolute left-0 -bottom-1 w-0 h-[1px] bg-[#b86d96] transition-all duration-300 group-hover:w-full"></span>
-            </button>
-          ))}
+        <div className="hidden flex-1 items-center justify-center gap-7 lg:flex">
+          {navLinks.map((link) => {
+            const Icon = link.icon;
+            return (
+              <button
+                key={link.name}
+                onClick={() => handleNav(link.route)}
+                className="group flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#2b2f37] transition-colors hover:text-[#7A1F3D]"
+              >
+                <Icon size={12} className="opacity-80" />
+                <span>{link.name}</span>
+              </button>
+            );
+          })}
         </div>
 
         <button
           onClick={() => handleNav('/contact')}
-          className="hidden md:inline-flex items-center justify-center px-4 py-2 rounded-full bg-[#7A1F3D] text-[10px] uppercase tracking-[0.16em] font-bold text-white shadow-lg shadow-[#7A1F3D]/20 transition-transform hover:scale-[1.02]"
+          className="hidden md:inline-flex items-center justify-center rounded-full bg-[#7A1F3D] px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.18em] text-white shadow-[0_18px_20px_rgba(122,31,61,0.18)] transition-transform hover:-translate-y-0.5"
         >
-          Book Now
+          Book a Consultation
         </button>
 
-        <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-white z-50" aria-label="Toggle menu">
+        <button onClick={() => setIsOpen(!isOpen)} className="z-50 text-[#17181d] lg:hidden" aria-label="Toggle menu">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </nav>
 
       {isOpen && (
-        <div className="lg:hidden mt-2 bg-[#0d0d0d] rounded-2xl border border-[#1f1f1f] flex flex-col items-center py-6 space-y-4 shadow-2xl transition-all duration-300">
+        <div className="mt-2 flex flex-col items-center space-y-4 rounded-[22px] border border-[#e5e5e5] bg-[#f5f3f1] py-6 shadow-[0_10px_25px_rgba(17,24,39,0.08)] lg:hidden">
           {navLinks.map((link) => (
             <button
-              key={link.route}
+              key={link.name}
               onClick={() => handleNav(link.route)}
-              className="text-[#d6d6d6] hover:text-white text-sm uppercase tracking-[0.2em] font-semibold transition-all duration-300"
+              className="flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-[#2b2f37]"
             >
               {link.name}
             </button>

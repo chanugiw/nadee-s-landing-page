@@ -1,6 +1,20 @@
 import React from 'react';
 
 const Hero = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+      return;
+    }
+
+    window.location.href = '/#contact';
+  };
+
   return (
     <section
       id="home"
@@ -29,6 +43,14 @@ const Hero = () => {
             <p className="mt-6 max-w-[560px] text-base leading-relaxed text-[#d4d4d4] md:text-lg">
               I help businesses uncover consumer insights, strengthen their brands, and develop research-driven digital strategies that combine community intelligence, consumer behaviour research, and data-driven marketing to achieve measurable results.
             </p>
+
+            <button
+              type="button"
+              onClick={scrollToContact}
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#7A1F3D] px-6 py-3 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-white shadow-[0_18px_32px_rgba(122,31,61,0.2)] transition-transform hover:-translate-y-0.5"
+            >
+              GET STARTED
+            </button>
           </div>
 
           <div className="relative flex h-[420px] items-center justify-center lg:h-[500px]">

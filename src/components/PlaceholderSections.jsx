@@ -150,7 +150,7 @@ export const Contact = () => {
   }
 
   return (
-    <section id="contact" className="mx-2 md:mx-4 my-4 bg-[#f3f2f0] px-6 py-16 md:px-10 lg:px-14 rounded-[30px] shadow-[0_30px_70px_rgba(0,0,0,0.08)] max-w-[97%]">
+    <section id="contact" className="mx-2 md:mx-4 my-4 scroll-mt-[110px] bg-[#f3f2f0] px-6 py-16 md:px-10 lg:px-14 rounded-[30px] shadow-[0_30px_70px_rgba(0,0,0,0.08)] max-w-[97%]">
       <div className="mx-auto max-w-6xl grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="rounded-[28px] bg-[#111827] p-8 text-white shadow-[0_24px_60px_rgba(17,24,39,0.18)]">
           <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#d8d8d8] bg-white/10 px-3 py-1.5 text-[0.62rem] font-bold uppercase tracking-[0.24em] text-[#f4d5df]">
