@@ -33,6 +33,18 @@ body {
   overflow-x: hidden;
 }
 
+.consultation-page-copy p:not(.consultation-label) {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  letter-spacing: 0 !important;
+  color: #4A4A4A !important;
+}
+
+.consultation-page-copy p {
+  margin: 0;
+}
+
 #root {
   min-height: 100vh;
   width: 100%;
