@@ -11,6 +11,7 @@ const Navbar = () => {
     { name: 'Home', route: '/', icon: Home },
     { name: 'About', route: '/about', icon: Info },
     { name: 'Consultation', route: '/contact', icon: MessageSquareText },
+    { name: 'Research', route: '#', icon: FolderKanban, comingSoon: true },
     { name: 'FAQ', route: '/faq', icon: BriefcaseBusiness },
   ];
 
@@ -59,14 +60,28 @@ const Navbar = () => {
         <div className="hidden flex-1 items-center justify-center gap-7 lg:flex">
           {navLinks.map((link) => {
             const Icon = link.icon;
+            const isDisabled = link.comingSoon;
+
             return (
               <button
                 key={link.name}
-                onClick={() => handleNav(link.route)}
-                className="group flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#e5e7eb] transition-colors hover:text-[#d9a6b4]"
+                onClick={() => !isDisabled && handleNav(link.route)}
+                disabled={isDisabled}
+                className={`group flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] transition-colors ${
+                  isDisabled
+                    ? 'cursor-not-allowed text-[#c9b1ba] opacity-80 pointer-events-none'
+                    : 'text-[#e5e7eb] hover:text-[#d9a6b4]'
+                }`}
               >
                 <Icon size={12} className="opacity-80" />
-                <span>{link.name}</span>
+                <span className="flex flex-col items-center gap-1 leading-none">
+                  <span>{link.name}</span>
+                  {isDisabled && (
+                    <span className="inline-flex items-center rounded-full border border-[#7A1C3E]/70 bg-[#7A1C3E]/10 px-1.5 py-[2px] text-[8px] font-bold uppercase tracking-[0.12em] text-[#d8a8b7]">
+                      Coming Soon
+                    </span>
+                  )}
+                </span>
               </button>
             );
           })}
@@ -86,15 +101,31 @@ const Navbar = () => {
 
       {isOpen && (
         <div className="mx-auto mt-2 flex max-w-[1400px] flex-col items-center space-y-4 rounded-[22px] border border-[#2c2c31] bg-[#0d0d0f]/95 px-4 py-6 shadow-[0_12px_30px_rgba(0,0,0,0.35)] backdrop-blur-sm lg:hidden">
-          {navLinks.map((link) => (
-            <button
-              key={link.name}
-              onClick={() => handleNav(link.route)}
-              className="flex w-full items-center justify-center gap-2 rounded-full border border-[#313136] bg-[#16171a] px-4 py-3 text-sm uppercase tracking-[0.2em] text-[#f3f4f6]"
-            >
-              {link.name}
-            </button>
-          ))}
+          {navLinks.map((link) => {
+            const isDisabled = link.comingSoon;
+
+            return (
+              <button
+                key={link.name}
+                onClick={() => !isDisabled && handleNav(link.route)}
+                disabled={isDisabled}
+                className={`flex w-full items-center justify-center gap-2 rounded-full border px-4 py-3 text-sm uppercase tracking-[0.2em] ${
+                  isDisabled
+                    ? 'cursor-not-allowed border-[#3a2b33] bg-[#1b171a] text-[#d4bcc5] opacity-90 pointer-events-none'
+                    : 'border-[#313136] bg-[#16171a] text-[#f3f4f6]'
+                }`}
+              >
+                <span className="flex flex-col items-center gap-1">
+                  <span>{link.name}</span>
+                  {isDisabled && (
+                    <span className="inline-flex items-center rounded-full border border-[#7A1C3E]/60 bg-[#7A1C3E]/10 px-2 py-[3px] text-[8px] font-bold uppercase tracking-[0.12em] text-[#f4cad8]">
+                      Coming Soon
+                    </span>
+                  )}
+                </span>
+              </button>
+            );
+          })}
           <button
             onClick={() => handleNav('/contact')}
             className="mt-2 w-full rounded-full bg-[#7A1F3D] px-5 py-3 text-sm font-bold uppercase tracking-[0.18em] text-white"
