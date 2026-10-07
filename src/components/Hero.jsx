@@ -41,16 +41,16 @@ const Hero = () => {
               <button
                 type="button"
                 onClick={scrollToContact}
-                className="inline-flex w-full max-w-[280px] items-center justify-center gap-2 rounded-[18px] bg-[#2f7ef7] px-6 py-4 text-[1.1rem] font-bold uppercase tracking-[0.04em] text-white shadow-[0_8px_25px_rgba(47,126,247,0.35)] transition-transform hover:-translate-y-0.5 sm:w-auto"
+                className="inline-flex w-full max-w-[320px] items-center justify-center gap-2 rounded-[18px] bg-[#7A1C3E] px-6 py-4 text-[1.1rem] font-extrabold uppercase tracking-[0.04em] text-[#FFFFFF] shadow-[0_10px_28px_rgba(122,28,62,0.38)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#6b1d38] active:bg-[#5d1a31] sm:w-auto"
               >
-                Book a consultation <span aria-hidden="true">›</span>
+                BOOK A CONSULTATION <span aria-hidden="true">›</span>
               </button>
             </div>
           </div>
 
           <div className="order-1 relative flex items-center justify-center lg:order-2">
             <div className="absolute h-[290px] w-[290px] rounded-full bg-[radial-gradient(circle,#59d4ff_0%,rgba(89,212,255,0.8)_18%,rgba(89,212,255,0.08)_30%,transparent_62%)] blur-[10px] lg:h-[360px] lg:w-[360px]" />
-            <div className="relative flex h-[270px] w-[270px] items-center justify-center rounded-full border-[4px] border-[#51d9ff] bg-[#f8b6d0] shadow-[0_0_28px_rgba(81,217,255,0.85)] lg:h-[390px] lg:w-[390px]">
+            <div className="relative flex h-[270px] w-[270px] items-center justify-center rounded-full border-[3px] border-[#7A1C3E] bg-[#f8b6d0] shadow-[0_0_20px_rgba(122,28,62,0.6)] lg:h-[390px] lg:w-[390px]">
               <img
                 src="/assets/nadee-portrait.jpeg"
                 alt="Nadee Senanayake"
