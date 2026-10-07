@@ -40,8 +40,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky left-0 right-0 top-4 z-50 mb-6 w-full px-2 sm:px-4 md:px-6">
-      <nav className="mx-auto flex max-w-[1200px] items-center justify-between rounded-[22px] border border-[#2b2b30] bg-[#0d0d0f]/95 px-3 py-3 shadow-[0_18px_35px_rgba(0,0,0,0.35)] backdrop-blur-sm sm:px-4 md:px-6">
+    <div className="sticky left-0 right-0 top-4 z-50 mx-auto mb-6 w-[calc(100%-16px)] max-w-[97%] md:max-w-[1200px]">
+      <nav className="mx-auto flex items-center justify-between rounded-[22px] border border-[#2b2b30] bg-[#0d0d0f]/95 px-3 py-3 shadow-[0_18px_35px_rgba(0,0,0,0.35)] backdrop-blur-sm sm:px-4 md:px-6">
         <button onClick={goHome} className="flex shrink-0 items-center gap-3 text-left text-white">
           <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-[8px] border border-[#3a3a3f] bg-[#0e0e10] p-1 shadow-inner md:h-12 md:w-12">
             <img
