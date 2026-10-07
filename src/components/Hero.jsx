@@ -18,41 +18,46 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative mx-2 my-4 max-w-[97%] overflow-hidden rounded-[30px] bg-[#0b0b0d] shadow-[0_25px_60px_rgba(0,0,0,0.35)]"
+      className="relative mx-2 my-4 max-w-[97%] overflow-hidden rounded-[30px] bg-[#05070d] shadow-[0_25px_60px_rgba(0,0,0,0.35)]"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(148,94,136,0.18),transparent_26%),linear-gradient(90deg,#050507_0%,#090c12_42%,#05070d_100%)]" />
+      <div className="hero-network absolute inset-0 opacity-90" />
 
-      <div className="relative z-10 flex min-h-[420px] items-center sm:min-h-[480px] lg:min-h-[520px]">
-        <div className="mx-auto grid w-full max-w-7xl items-center gap-8 px-4 py-8 sm:px-6 md:px-10 lg:grid-cols-[1.08fr_0.92fr] lg:px-16">
-          <div className="order-2 max-w-[650px] lg:order-1">
-            <div className="mb-4 text-[0.72rem] font-bold uppercase tracking-[0.22em] text-[#d7d7d7] sm:text-[0.82rem]">
-              Nadee Senanayake
-            </div>
-
-            <button
-              type="button"
-              onClick={scrollToContact}
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#7A1F3D] px-5 py-3 text-[0.68rem] font-bold uppercase tracking-[0.18em] text-white shadow-[0_18px_32px_rgba(122,31,61,0.2)] transition-transform hover:-translate-y-0.5 sm:px-6"
+      <div className="relative z-10 flex min-h-[420px] items-center py-10 sm:min-h-[480px] lg:min-h-[560px] lg:py-12">
+        <div className="mx-auto grid w-full max-w-7xl items-center gap-6 px-4 sm:px-6 md:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:px-16">
+          <div className="order-2 max-w-[650px] text-center lg:order-1 lg:text-left">
+            <h1
+              className="text-[2.5rem] font-black leading-[0.9] tracking-[-0.06em] text-[#f4f4f4] sm:text-[3.2rem] lg:text-[5.9rem]"
+              style={{ fontFamily: '"Plus Jakarta Sans", "Segoe UI", sans-serif', textWrap: 'balance' }}
             >
-              GET STARTED
-            </button>
+              <span className="block">Nadee</span>
+              <span className="block">Senanayake</span>
+            </h1>
+
+            <p className="mt-4 text-[0.9rem] font-light italic text-[#eaeaea] sm:text-[1.05rem] lg:mt-6 lg:text-[1.2rem]">
+              Brand Strategiest, Performance Marketer, EWOM Marketing Strategist, Market Researcher - Digital Consumers
+            </p>
+
+            <div className="mt-7 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
+              <button
+                type="button"
+                onClick={scrollToContact}
+                className="inline-flex w-full max-w-[280px] items-center justify-center gap-2 rounded-[18px] bg-[#2f7ef7] px-6 py-4 text-[1.1rem] font-semibold text-white shadow-[0_8px_25px_rgba(47,126,247,0.35)] transition-transform hover:-translate-y-0.5 sm:w-auto"
+              >
+                Book a consultation <span aria-hidden="true">›</span>
+              </button>
+            </div>
           </div>
 
-          <div className="relative order-1 flex h-[300px] items-center justify-center sm:h-[360px] lg:order-2 lg:h-[500px]">
-            <div className="pointer-events-none absolute right-[-18%] top-1/2 hidden h-[320px] w-[320px] -translate-y-1/2 rounded-full bg-[#7A1F3D]/95 shadow-[0_0_45px_rgba(122,31,61,0.35)] lg:block" />
-            <div className="pointer-events-none absolute right-[6%] top-1/2 hidden h-[240px] w-[240px] -translate-y-1/2 rounded-full bg-[#e7e3e5] opacity-95 lg:block" />
-            <div className="pointer-events-none absolute right-[10%] top-[18%] hidden h-[18px] w-[18px] rounded-full bg-[#7A1F3D] lg:block" />
-            <div className="pointer-events-none absolute right-[3%] bottom-[18%] hidden h-[18px] w-[18px] rounded-full bg-[#7A1F3D] lg:block" />
-            <div className="pointer-events-none absolute right-[12%] top-[50%] hidden h-[190px] w-[190px] -translate-y-1/2 rounded-full border border-[#7A1F3D]/80 lg:block" />
-
-            <div className="relative z-10 w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[420px]">
+          <div className="order-1 relative flex items-center justify-center lg:order-2">
+            <div className="absolute h-[290px] w-[290px] rounded-full bg-[radial-gradient(circle,#59d4ff_0%,rgba(89,212,255,0.8)_18%,rgba(89,212,255,0.08)_30%,transparent_62%)] blur-[10px] lg:h-[360px] lg:w-[360px]" />
+            <div className="relative flex h-[270px] w-[270px] items-center justify-center rounded-full border-[4px] border-[#51d9ff] bg-[#f8b6d0] shadow-[0_0_28px_rgba(81,217,255,0.85)] lg:h-[390px] lg:w-[390px]">
               <img
                 src="/assets/nadee-portrait.jpeg"
                 alt="Nadee Senanayake"
-                className="w-full rounded-[22px] object-cover shadow-[0_25px_40px_rgba(0,0,0,0.28)]"
+                className="h-full w-full rounded-full object-cover object-top"
                 style={{
                   filter: 'saturate(0.9) contrast(1.04)',
-                  aspectRatio: '4 / 5'
+                  objectPosition: 'center top'
                 }}
               />
             </div>
