@@ -64,11 +64,11 @@ const ContactPage = () => {
               Strategic digital guidance
             </div>
 
-            <h1 className="max-w-[620px] text-5xl font-black leading-[0.9] tracking-[-0.08em] text-[#1a1d22] md:text-[5.2rem]">
+            <h1 className="max-w-[620px] text-[2.7rem] font-black leading-[0.9] tracking-[-0.08em] text-[#1a1d22] sm:text-5xl md:text-[5.2rem]">
               Book a <span className="block text-[#7A1F3D]">Consultation</span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-[#475163]">
+            <p className="mt-6 max-w-xl text-base leading-7 text-[#475163] md:text-lg md:leading-8">
               One conversation. Clear direction. Smarter digital decisions.
             </p>
 

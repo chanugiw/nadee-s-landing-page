@@ -12,13 +12,13 @@ const iconRow = [
 const AboutPage = () => {
   return (
     <main className="space-y-6">
-      <section className="relative mx-2 md:mx-4 my-4 min-h-[85vh] bg-[#121212] rounded-3xl overflow-hidden shadow-2xl max-w-[97%] px-6 lg:px-16 py-16 flex items-center">
+      <section className="relative mx-2 my-4 flex min-h-[85vh] max-w-[97%] items-center overflow-hidden rounded-3xl bg-[#121212] px-4 py-10 shadow-2xl sm:px-6 md:mx-4 md:px-6 lg:px-16 lg:py-16">
 
-        <div className="absolute -right-24 -top-24 w-[420px] h-[420px] rounded-full bg-[#7A1F3D] opacity-90"></div>
-        <div className="absolute right-10 top-0 w-64 h-full border-2 border-[#7A1F3D]/40 rounded-[60px]"></div>
-        <div className="absolute right-0 bottom-10 w-40 h-40 rounded-full border border-[#333]"></div>
+        <div className="absolute -right-24 -top-24 hidden h-[260px] w-[260px] rounded-full bg-[#7A1F3D] opacity-90 md:block md:h-[420px] md:w-[420px]"></div>
+        <div className="absolute right-10 top-0 hidden h-full w-64 rounded-[60px] border-2 border-[#7A1F3D]/40 md:block"></div>
+        <div className="absolute right-0 bottom-10 hidden h-40 w-40 rounded-full border border-[#333] md:block"></div>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -29,12 +29,12 @@ const AboutPage = () => {
               <span className="text-[#7A1F3D] text-xs uppercase tracking-[0.25em] font-bold">Biography</span>
             </div>
 
-            <h1 className="text-white text-5xl md:text-6xl font-bold leading-tight mb-6">
+            <h1 className="mb-6 text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
               About<br />
               <span className="text-[#B8355A]">Nadee</span>
             </h1>
 
-            <p className="text-[#B0B0B0] text-base leading-relaxed max-w-md mb-6">
+            <p className="mb-6 max-w-md text-sm leading-relaxed text-[#B0B0B0] sm:text-base">
               Nadee Senanayake is a Sri Lankan <span className="text-white font-medium">Digital Marketing professional</span>,{' '}
               <span className="text-white font-medium">strategic content specialist</span>, and{' '}
               <span className="text-white font-medium">certified brand strategist</span>, with experience spanning

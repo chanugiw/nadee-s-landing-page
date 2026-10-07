@@ -38,7 +38,7 @@ const FaqPage = () => {
       <section className="mx-auto max-w-5xl rounded-[30px] bg-[#f8f8f8] px-6 py-10 shadow-[0_20px_50px_rgba(0,0,0,0.08)] md:px-10 lg:px-14">
         <div className="mb-8">
           <p className="text-[0.7rem] font-bold uppercase tracking-[0.28em] text-[#7A1F3D]">FAQ</p>
-          <h1 className="mt-4 text-4xl font-black tracking-[-0.05em] text-[#17181d] md:text-5xl">Frequently Asked Questions</h1>
+          <h1 className="mt-4 text-[2.25rem] font-black tracking-[-0.05em] text-[#17181d] sm:text-4xl md:text-5xl">Frequently Asked Questions</h1>
         </div>
 
         <div className="space-y-4">

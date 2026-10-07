@@ -18,8 +18,8 @@ const LinkedinIcon = (props) => (
 
 const Footer = () => {
   return (
-    <footer className="bg-[#121212] mx-2 md:mx-4 max-w-[96%] rounded-3xl mt-4 mb-6 border border-[#222] text-[#A0A0A0] overflow-hidden">
-      <div className="px-8 md:px-12 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
+    <footer className="mx-2 mt-4 mb-6 max-w-[96%] overflow-hidden rounded-3xl border border-[#222] bg-[#121212] text-[#A0A0A0] md:mx-4">
+      <div className="grid grid-cols-1 gap-10 px-5 py-8 sm:px-6 md:grid-cols-4 md:px-12 md:py-12">
 
         {/* Brand column */}
         <div className="flex flex-col gap-3">

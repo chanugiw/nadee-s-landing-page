@@ -27,8 +27,8 @@ const items = [
 
 const WhatIDo = () => {
   return (
-    <section className="mx-2 md:mx-4 my-4 py-16 bg-[#f9f9f9] rounded-3xl shadow-2xl max-w-[97%] px-6 lg:px-12 xl:px-16">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+    <section className="mx-2 my-4 max-w-[97%] rounded-3xl bg-[#f9f9f9] px-4 py-10 shadow-2xl sm:px-6 md:mx-4 lg:px-12 lg:py-16 xl:px-16">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-8 lg:grid-cols-12 lg:gap-10">
 
         {/* Left: heading + CTA */}
         <motion.div

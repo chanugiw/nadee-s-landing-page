@@ -24,11 +24,11 @@ const ContactCardPage = () => {
               Strategic guidance for growth-ready brands
             </div>
 
-            <h1 className="max-w-xl text-4xl font-black leading-[0.95] tracking-[-0.06em] text-[#17181d] md:text-5xl lg:text-6xl">
+            <h1 className="max-w-xl text-[2.3rem] font-black leading-[0.95] tracking-[-0.06em] text-[#17181d] sm:text-4xl md:text-5xl lg:text-6xl">
               Let’s build a smarter digital growth strategy.
             </h1>
 
-            <p className="mt-5 max-w-lg text-base leading-7 text-[#4d5362] md:text-lg">
+            <p className="mt-5 max-w-lg text-sm leading-7 text-[#4d5362] sm:text-base md:text-lg">
               Strategic consultation for businesses, organisations and brands that want better audience insight, sharper positioning, and measurable digital growth.
             </p>
 

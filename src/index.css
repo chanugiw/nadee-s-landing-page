@@ -4,28 +4,66 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-  background-color: #0b0b0b;
-  color: #FFFFFF;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
 :root {
-  --accent: #7A1F3D; /* primary maroon */
-  --accent-2: #B8355A; /* secondary red */
-  --muted: #A0A0A0; /* muted text */
-  --panel-bg: #121212; /* surfaces */
+  --accent: #7A1F3D;
+  --accent-2: #B8355A;
+  --muted: #A0A0A0;
+  --panel-bg: #121212;
   --card-bg: #1C1C1C;
   --border: #222222;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #f3f4f6;
+  color: #111827;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f3f4f6;
+  color: #111827;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 .font-signature {
   font-family: 'Playfair Display', serif;
   font-style: italic;
 }
-
 
 ::-webkit-scrollbar {
   width: 6px;
@@ -39,4 +77,10 @@ html {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #A0A0A0;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
 }

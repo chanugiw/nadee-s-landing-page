@@ -40,8 +40,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="sticky top-4 left-0 right-0 z-50 w-full px-4 md:px-8 lg:px-16">
-      <nav className="flex items-center justify-between rounded-[22px] border border-[#e5e5e5] bg-[#f5f3f1] px-4 py-3 shadow-[0_10px_25px_rgba(17,24,39,0.06)] md:px-6">
+    <div className="sticky left-0 right-0 top-4 z-50 w-full px-3 sm:px-4 md:px-8 lg:px-16">
+      <nav className="mx-auto flex max-w-[1400px] items-center justify-between rounded-[22px] border border-[#e5e5e5] bg-[#f5f3f1] px-3 py-3 shadow-[0_10px_25px_rgba(17,24,39,0.06)] sm:px-4 md:px-6">
         <button onClick={goHome} className="flex shrink-0 items-center gap-3 text-left text-[#17181d]">
           <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-[8px] border border-[#d6d1ce] bg-[#0e0e10] p-1 shadow-inner md:h-12 md:w-12">
             <img
@@ -79,22 +79,28 @@ const Navbar = () => {
           Book a Consultation
         </button>
 
-        <button onClick={() => setIsOpen(!isOpen)} className="z-50 text-[#17181d] lg:hidden" aria-label="Toggle menu">
+        <button onClick={() => setIsOpen(!isOpen)} className="z-50 inline-flex items-center justify-center text-[#17181d] lg:hidden" aria-label="Toggle menu">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </nav>
 
       {isOpen && (
-        <div className="mt-2 flex flex-col items-center space-y-4 rounded-[22px] border border-[#e5e5e5] bg-[#f5f3f1] py-6 shadow-[0_10px_25px_rgba(17,24,39,0.08)] lg:hidden">
+        <div className="mx-auto mt-2 flex max-w-[1400px] flex-col items-center space-y-4 rounded-[22px] border border-[#e5e5e5] bg-[#f5f3f1] px-4 py-6 shadow-[0_10px_25px_rgba(17,24,39,0.08)] lg:hidden">
           {navLinks.map((link) => (
             <button
               key={link.name}
               onClick={() => handleNav(link.route)}
-              className="flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-[#2b2f37]"
+              className="flex w-full items-center justify-center gap-2 rounded-full border border-[#e5e5e5] bg-white px-4 py-3 text-sm uppercase tracking-[0.2em] text-[#2b2f37]"
             >
               {link.name}
             </button>
           ))}
+          <button
+            onClick={() => handleNav('/contact')}
+            className="mt-2 w-full rounded-full bg-[#7A1F3D] px-5 py-3 text-sm font-bold uppercase tracking-[0.18em] text-white"
+          >
+            Book a Consultation
+          </button>
         </div>
       )}
     </div>

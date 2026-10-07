@@ -72,7 +72,7 @@ const ProjectCard = ({ project }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="min-w-[300px] max-w-[300px] bg-white border border-[#eee] rounded-xl overflow-hidden shadow-sm flex flex-col">
+    <div className="w-full max-w-[300px] flex-none overflow-hidden rounded-xl border border-[#eee] bg-white shadow-sm sm:min-w-[300px]">
 
       {/* Header */}
       <div className="bg-[#7A1F3D] px-5 py-3 flex items-center justify-between">
