@@ -71,8 +71,9 @@ const ContactPage = () => {
               Strategic digital guidance
             </div>
 
-            <h1 className="max-w-[820px] text-[2.7rem] font-black leading-[0.9] tracking-[-0.08em] text-[#1a1d22] sm:text-5xl max-[768px]:text-[1.8rem] max-[768px]:leading-[1.05] md:text-[5.2rem]">
-              Book a <span className="block text-[#7A1F3D]">Consultation</span>
+            <h1 className="mb-6 mt-2 max-w-[820px] text-[2.4rem] font-black leading-[1.15] tracking-[0.02em] text-[#1a1d22] sm:text-5xl max-[768px]:mb-4 max-[768px]:text-[1.9rem] max-[768px]:leading-[1.2] md:text-[5.1rem]">
+              <span className="block">Book a</span>
+              <span className="block text-[#7A1C3E]">Consultation</span>
             </h1>
 
             <p className="mt-6 max-w-[760px] max-[768px]:mt-4">
