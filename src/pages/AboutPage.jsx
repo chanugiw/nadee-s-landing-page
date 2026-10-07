@@ -41,7 +41,8 @@ const AboutPage = () => {
             <img
               src="/assets/nadee-portrait.jpeg"
               alt="Nadee Senanayake"
-              className="relative z-10 w-full max-w-sm object-cover shadow-2xl"
+              className="relative z-10 mx-auto w-full max-w-[220px] object-cover object-top shadow-2xl sm:max-w-sm md:max-w-sm lg:max-w-sm"
+              style={{ objectPosition: 'center top' }}
             />
           </motion.div>
         </div>
