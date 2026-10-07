@@ -18,7 +18,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative mx-2 my-4 max-w-[97%] overflow-hidden rounded-[30px] bg-[#05070d] shadow-[0_25px_60px_rgba(0,0,0,0.35)]"
+      className="hero-shell relative my-4 w-full overflow-hidden rounded-[30px] bg-[#05070d] shadow-[0_25px_60px_rgba(0,0,0,0.35)]"
     >
       <div className="hero-network absolute inset-0 opacity-90" />
 

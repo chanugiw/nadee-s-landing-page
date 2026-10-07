@@ -13,7 +13,7 @@ import FaqPage from './pages/FaqPage';
 
 function App() {
   return (
-    <div className="relative min-h-screen overflow-x-hidden bg-[#f3f4f6] py-6 text-[#000000] antialiased selection:bg-[#505050] selection:text-[#FFFFFF]">
+    <div className="relative min-h-screen w-full overflow-x-hidden bg-[#f3f4f6] px-4 md:px-8 text-[#000000] antialiased selection:bg-[#505050] selection:text-[#FFFFFF]">
       <Navbar />
 
       <Routes>

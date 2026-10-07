@@ -79,6 +79,14 @@ a {
   background: #A0A0A0;
 }
 
+@media (min-width: 769px) {
+  .navbar-shell,
+  .hero-shell {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 @media (max-width: 480px) {
   html {
     font-size: 15px;
