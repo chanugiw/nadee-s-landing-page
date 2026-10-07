@@ -26,14 +26,14 @@ const Hero = () => {
         <div className="mx-auto grid w-full max-w-7xl items-center gap-6 px-4 sm:px-6 md:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:px-16">
           <div className="order-2 max-w-[650px] text-center lg:order-1 lg:text-left">
             <h1
-              className="text-[2.5rem] font-black leading-[0.9] tracking-[-0.06em] text-[#f4f4f4] sm:text-[3.2rem] lg:text-[5.9rem]"
+              className="mt-2 text-[2.5rem] font-black leading-[1.2] tracking-[0.05em] text-[#f4f4f4] sm:mt-3 sm:text-[3.2rem] sm:leading-[1.18] lg:mt-0 lg:text-[5.9rem] lg:leading-[1.12] lg:tracking-[0.04em]"
               style={{ fontFamily: '"Plus Jakarta Sans", "Segoe UI", sans-serif', textWrap: 'balance' }}
             >
               <span className="block">Nadee</span>
-              <span className="block">Senanayake</span>
+              <span className="mt-1 block sm:mt-2 lg:mt-2">Senanayake</span>
             </h1>
 
-            <p className="mt-4 text-[0.9rem] font-light italic text-[#eaeaea] sm:text-[1.05rem] lg:mt-6 lg:text-[1.2rem]">
+            <p className="mt-6 text-[0.9rem] font-light italic text-[#eaeaea] sm:mt-7 sm:text-[1.05rem] lg:mt-8 lg:text-[1.2rem]">
               Brand Strategiest, Performance Marketer, EWOM Marketing Strategist, Market Researcher - Digital Consumers
             </p>
 
