@@ -134,13 +134,13 @@ const ContactPage = () => {
                 step.dark ? 'border-[#17181d] bg-[#17181d] text-white' : 'border-[#e2e5ea] bg-white text-[#1a1d22]'
               }`}
             >
-              <div className={`mb-5 text-4xl font-black tracking-[-0.08em] max-[768px]:mb-4 max-[768px]:text-3xl ${step.dark ? 'text-[#dca4b5]' : 'text-[#dca4b5]'}`}>
+              <div className={`mb-5 text-4xl font-black tracking-[-0.08em] max-[768px]:mb-4 max-[768px]:text-3xl ${step.dark ? 'text-[#ffe5f0]' : 'text-[#dca4b5]'}`}>
                 {step.number}
               </div>
 
               {step.dark ? (
                 <div className="rounded-[20px] bg-[#1f2330] p-4 ring-1 ring-white/10 max-[768px]:p-3">
-                  <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-[#f4d5df]">Ready to discuss your challenge?</p>
+                  <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-[#fff2f7]">Ready to discuss your challenge?</p>
                   <div className="mt-6 flex items-center justify-between gap-3 max-[768px]:mt-4">
                     <span className="text-lg font-bold tracking-[-0.05em] text-white max-[768px]:text-base">Check Availability</span>
                     <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#f4d5df] text-[#17181d] max-[768px]:h-8 max-[768px]:w-8">
@@ -158,7 +158,7 @@ const ContactPage = () => {
                 {step.title}
               </h3>
 
-              <p className={`mt-2 text-xs font-bold uppercase tracking-[0.18em] ${step.dark ? 'text-[#f4d5df]' : 'text-[#7A1F3D]'}`}>
+              <p className={`mt-2 text-xs font-bold uppercase tracking-[0.18em] ${step.dark ? 'text-[#fff1f6]' : 'text-[#7A1F3D]'}`}>
                 {step.label}
               </p>
 
@@ -206,7 +206,7 @@ const ContactPage = () => {
             <div className="rounded-[24px] bg-[#7A1F3D] p-6 text-white shadow-[0_20px_35px_rgba(122,31,61,0.2)] max-[768px]:p-4">
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-2xl max-[768px]:mb-3 max-[768px]:h-10 max-[768px]:w-10 max-[768px]:text-xl">◎</div>
               <h3 className="text-3xl font-black tracking-[-0.06em] max-[768px]:text-[1.5rem]">Strategy Built Around Your Problem</h3>
-              <p className="mt-4 text-black max-[768px]:mt-2">
+              <p className="mt-4 text-white max-[768px]:mt-2" style={{ color: '#ffffff', opacity: 1 }}>
                 No one-size-fits-all packages. Each consultation starts with your specific challenge and ends with practical strategic direction.
               </p>
             </div>
