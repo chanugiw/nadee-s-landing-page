@@ -1,22 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, PenTool, LineChart } from 'lucide-react';
 import WhatIDo from '../components/WhatIDo';
-
-const iconRow = [
-  { icon: TrendingUp, label: 'Performance Marketing' },
-  { icon: PenTool, label: 'Strategic Content' },
-  { icon: LineChart, label: 'Digital Growth & Analytics' },
-];
 
 const AboutPage = () => {
   return (
     <main className="space-y-6">
-      <section className="relative mx-2 my-4 flex min-h-[85vh] max-w-[97%] items-center overflow-hidden rounded-3xl bg-[#121212] px-4 py-10 shadow-2xl sm:px-6 md:mx-4 md:px-6 lg:px-16 lg:py-16">
-
-        <div className="absolute -right-24 -top-24 hidden h-[260px] w-[260px] rounded-full bg-[#7A1F3D] opacity-90 md:block md:h-[420px] md:w-[420px]"></div>
-        <div className="absolute right-10 top-0 hidden h-full w-64 rounded-[60px] border-2 border-[#7A1F3D]/40 md:block"></div>
-        <div className="absolute right-0 bottom-10 hidden h-40 w-40 rounded-full border border-[#333] md:block"></div>
+      <section className="relative mx-2 my-4 flex min-h-[85vh] max-w-[97%] items-center bg-[#121212] px-4 py-10 shadow-2xl sm:px-6 md:mx-4 md:px-6 lg:px-16 lg:py-16">
 
         <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12">
           <motion.div
@@ -41,21 +30,6 @@ const AboutPage = () => {
               performance marketing, organic growth, digital strategy, and audience-focused communication.
             </p>
 
-            <div className="mb-8">
-              <p className="text-white font-bold text-lg" style={{ fontFamily: 'cursive' }}>Nadee Senanayake</p>
-              <p className="text-[#7A1F3D] text-xs uppercase tracking-[0.2em] font-bold">Digital Marketing Professional</p>
-            </div>
-
-            <div className="flex flex-wrap gap-6">
-              {iconRow.map(({ icon: Icon, label }, i) => (
-                <div key={i} className="flex items-center gap-2 max-w-[130px]">
-                  <div className="w-9 h-9 rounded-full border border-[#7A1F3D] flex items-center justify-center flex-shrink-0">
-                    <Icon size={16} className="text-[#B8355A]" />
-                  </div>
-                  <span className="text-[#A0A0A0] text-xs font-medium leading-tight">{label}</span>
-                </div>
-              ))}
-            </div>
           </motion.div>
 
           <motion.div
@@ -67,7 +41,7 @@ const AboutPage = () => {
             <img
               src="/assets/nadee-portrait.jpeg"
               alt="Nadee Senanayake"
-              className="relative z-10 w-full max-w-sm rounded-3xl object-cover shadow-2xl"
+              className="relative z-10 w-full max-w-sm object-cover shadow-2xl"
             />
           </motion.div>
         </div>
