@@ -44,18 +44,28 @@ const WhatIDo = () => {
               <span className="text-[#7A1F3D] text-xs uppercase tracking-[0.25em] font-bold">What I Do</span>
             </div>
 
-            <div className="mb-4">
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] leading-tight">
-                  Strategic Digital Practice
-                </h2>
-                <span className="inline-flex w-fit items-center rounded-full border border-[#B65B74] bg-[#fff5f7] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#7A1F3D]">
-                  (Non Educational Clients Only)
-                </span>
-              </div>
-            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] leading-tight">
+              Strategic Digital Practice
+            </h2>
+            <span
+              className="mb-4 mt-2 inline-block rounded-full bg-[#f7e8ee] px-3 py-1 text-[12px] font-semibold tracking-[0.5px] text-[#7A1F3D]"
+              style={{
+                display: 'inline-block',
+                fontSize: '12px',
+                fontWeight: 600,
+                color: '#7A1C3E',
+                backgroundColor: 'rgba(122, 28, 62, 0.1)',
+                padding: '4px 10px',
+                borderRadius: '12px',
+                marginTop: '8px',
+                marginBottom: '12px',
+                letterSpacing: '0.5px'
+              }}
+            >
+              (Non Educational Clients Only)
+            </span>
 
-            <p className="text-[#555] text-sm leading-relaxed mb-8">
+            <p className="mb-8 text-sm leading-relaxed text-[#555]">
               I work at the intersection of digital strategy, audience behaviour, content, and performance,
               combining paid and organic approaches to build stronger digital growth frameworks.
             </p>
