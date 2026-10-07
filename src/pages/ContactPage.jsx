@@ -105,16 +105,15 @@ const ContactPage = () => {
           Select the area that best matches your current challenge. Each consultation is tailored to your business goals, strategic priorities and audience context.
         </p>
 
-        <div className="mt-8 grid gap-5 max-[768px]:mt-5 max-[768px]:gap-3 md:grid-cols-2 xl:grid-cols-4">
-          {consultationAreas.map(({ icon: Icon, title, accent }, index) => (
-            <div key={title} className="rounded-[24px] border border-[#e5e7eb] bg-white p-5 shadow-[0_10px_22px_rgba(15,23,42,0.04)] transition-transform hover:-translate-y-1 max-[768px]:p-4">
-              <div className={`mb-4 flex h-12 w-12 items-center justify-center rounded-full border ${accent} max-[768px]:h-10 max-[768px]:w-10`}>
-                <Icon size={20} />
+        <div className="mt-8 grid gap-4 max-[768px]:mt-5 max-[768px]:gap-3 md:grid-cols-2 xl:grid-cols-4">
+          {consultationAreas.map(({ icon: Icon, title, accent }) => (
+            <div key={title} className="rounded-[22px] border border-[#e5e7eb] bg-white p-3.5 shadow-[0_10px_22px_rgba(15,23,42,0.04)] transition-transform hover:-translate-y-1 max-[768px]:p-3">
+              <div className={`mb-3 flex h-11 w-11 items-center justify-center rounded-full border ${accent} max-[768px]:h-10 max-[768px]:w-10`}>
+                <Icon size={18} />
               </div>
-              <div className="mb-4 text-2xl font-black tracking-[-0.06em] text-[#7A1F3D] max-[768px]:mb-3 max-[768px]:text-xl">0{index + 1}</div>
-              <h3 className="text-lg font-bold leading-6 text-[#17181d] max-[768px]:text-[0.96rem] max-[768px]:leading-5">{title}</h3>
-              <div className="mt-5 flex justify-end max-[768px]:mt-4">
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#e7d8df] text-[#7A1F3D] max-[768px]:h-7 max-[768px]:w-7">→</span>
+              <h3 className="min-h-[3.2rem] text-[0.98rem] font-bold leading-5 text-[#17181d] max-[768px]:min-h-[2.8rem] max-[768px]:text-[0.9rem] max-[768px]:leading-4">{title}</h3>
+              <div className="mt-4 flex justify-end max-[768px]:mt-3">
+                <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-[#e7d8df] text-[#7A1F3D] max-[768px]:h-6 max-[768px]:w-6">→</span>
               </div>
             </div>
           ))}
