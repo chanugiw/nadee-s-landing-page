@@ -206,7 +206,7 @@ const ContactPage = () => {
             <div className="rounded-[24px] bg-[#7A1F3D] p-6 text-white shadow-[0_20px_35px_rgba(122,31,61,0.2)] max-[768px]:p-4">
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-2xl max-[768px]:mb-3 max-[768px]:h-10 max-[768px]:w-10 max-[768px]:text-xl">◎</div>
               <h3 className="text-3xl font-black tracking-[-0.06em] max-[768px]:text-[1.5rem]">Strategy Built Around Your Problem</h3>
-              <p className="mt-4 max-[768px]:mt-2">
+              <p className="mt-4 text-black max-[768px]:mt-2">
                 No one-size-fits-all packages. Each consultation starts with your specific challenge and ends with practical strategic direction.
               </p>
             </div>
