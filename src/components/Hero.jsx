@@ -25,20 +25,9 @@ const Hero = () => {
       <div className="relative z-10 flex min-h-[420px] items-center sm:min-h-[480px] lg:min-h-[520px]">
         <div className="mx-auto grid w-full max-w-7xl items-center gap-8 px-4 py-8 sm:px-6 md:px-10 lg:grid-cols-[1.08fr_0.92fr] lg:px-16">
           <div className="order-2 max-w-[650px] lg:order-1">
-            <div className="mb-5 inline-flex items-center gap-3 text-[9px] font-bold uppercase tracking-[0.18em] text-[#b56488] sm:text-[10px]">
-              <span className="inline-block h-[1px] w-6 bg-[#b56488]" />
-              WHERE CONSUMER INTELLIGENCE MEETS DIGITAL BUSINESS STRATEGY
+            <div className="mb-4 text-[0.72rem] font-bold uppercase tracking-[0.22em] text-[#d7d7d7] sm:text-[0.82rem]">
+              Nadee Senanayake
             </div>
-
-            <h1
-              className="max-w-[620px] text-[2.15rem] font-black leading-[0.85] tracking-[-0.05em] text-[#f3f3f3] sm:text-[2.8rem] md:text-[3.4rem] lg:text-[4.4rem]"
-              style={{ fontFamily: '"Plus Jakarta Sans", "Segoe UI", sans-serif', textWrap: 'balance' }}
-            >
-              <span className="block">Transforming</span>
-              <span className="block text-[#e8e8e8]">Digital</span>
-              <span className="block whitespace-normal">Conversations into</span>
-              <span className="block">Business Growth</span>
-            </h1>
 
             <button
               type="button"
