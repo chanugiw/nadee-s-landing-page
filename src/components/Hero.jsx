@@ -41,7 +41,7 @@ const Hero = () => {
               <button
                 type="button"
                 onClick={scrollToContact}
-                className="inline-flex w-full max-w-[280px] items-center justify-center gap-2 rounded-[18px] bg-[#2f7ef7] px-6 py-4 text-[1.1rem] font-semibold text-white shadow-[0_8px_25px_rgba(47,126,247,0.35)] transition-transform hover:-translate-y-0.5 sm:w-auto"
+                className="inline-flex w-full max-w-[280px] items-center justify-center gap-2 rounded-[18px] bg-[#2f7ef7] px-6 py-4 text-[1.1rem] font-bold uppercase tracking-[0.04em] text-white shadow-[0_8px_25px_rgba(47,126,247,0.35)] transition-transform hover:-translate-y-0.5 sm:w-auto"
               >
                 Book a consultation <span aria-hidden="true">›</span>
               </button>
