@@ -50,13 +50,14 @@ const Hero = () => {
 
           <div className="order-1 relative flex items-center justify-center lg:order-2">
             <div className="absolute h-[290px] w-[290px] rounded-full bg-[radial-gradient(circle,#59d4ff_0%,rgba(89,212,255,0.8)_18%,rgba(89,212,255,0.08)_30%,transparent_62%)] blur-[10px] lg:h-[360px] lg:w-[360px]" />
-            <div className="relative flex h-[270px] w-[270px] items-center justify-center rounded-full border-[3px] border-[#7A1C3E] bg-[#f8b6d0] shadow-[0_0_20px_rgba(122,28,62,0.6)] lg:h-[390px] lg:w-[390px]">
+            <div className="relative flex h-[270px] w-[270px] items-center justify-center overflow-hidden rounded-full border-[3px] border-[#7A1C3E] bg-[linear-gradient(135deg,rgba(255,255,255,0.22),rgba(255,255,255,0.04))] shadow-[0_0_20px_rgba(122,28,62,0.6)] backdrop-blur-[2px] lg:h-[390px] lg:w-[390px]">
+              <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.6),transparent_42%)]" />
               <img
                 src="/assets/nadee-portrait.jpeg"
                 alt="Nadee Senanayake"
-                className="h-full w-full rounded-full object-cover object-top"
+                className="relative h-full w-full rounded-full object-cover object-top"
                 style={{
-                  filter: 'saturate(0.9) contrast(1.04)',
+                  filter: 'saturate(0.9) contrast(1.04) brightness(1.02)',
                   objectPosition: 'center top'
                 }}
               />
