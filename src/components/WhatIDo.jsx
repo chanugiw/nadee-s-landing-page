@@ -50,7 +50,9 @@ const WhatIDo = () => {
             combining paid and organic approaches to build stronger digital growth frameworks.
           </p>
           <a
-            href="#projects-experiments"
+            href="https://www.linkedin.com/in/nadee-senanayake/"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-2 bg-[#7A1F3D] text-white text-xs uppercase tracking-wider font-bold px-6 py-3 rounded-lg hover:bg-[#5f1830] transition-colors"
           >
             View My Portfolio
