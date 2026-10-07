@@ -40,7 +40,7 @@ const Hero = () => {
               <span className="block">Business Growth</span>
             </h1>
 
-            <p className="mt-6 max-w-[560px] text-sm leading-relaxed text-[#d4d4d4] sm:text-base md:text-lg">
+            <p className="mt-6 hidden max-w-[560px] text-sm leading-relaxed text-[#d4d4d4] sm:text-base md:block md:text-lg">
               I help businesses uncover consumer insights, strengthen their brands, and develop research-driven digital strategies that combine community intelligence, consumer behaviour research, and data-driven marketing to achieve measurable results.
             </p>
 
