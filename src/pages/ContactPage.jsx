@@ -8,7 +8,7 @@ const consultationAreas = [
   { icon: ChartNoAxesCombined, title: 'Social Listening, eWOM & Community Management', accent: 'bg-[#f4f0ff] text-[#5a3eb8]' },
   { icon: BadgeCheck, title: 'Online Reputation & Digital Crisis Management', accent: 'bg-[#e9faf6] text-[#0f766e]' },
   { icon: BriefcaseBusiness, title: 'Influencer & Digital Influence Strategy', accent: 'bg-[#f4ecff] text-[#6d4fc4]' },
-  { icon: ChartNoAxesCombined, title: 'Paid Media Consulting (Meta Ads & Google Ads - Non Education Industries)', accent: 'bg-[#fff3df] text-[#b76a00]' },
+  { icon: ChartNoAxesCombined, title: 'Paid Media Consulting (Meta Ads & Google Ads)', accent: 'bg-[#fff3df] text-[#b76a00]' },
   { icon: Sparkles, title: 'Talent Development & Industry Placement', accent: 'bg-[#eafaf8] text-[#0c5963]' },
   { icon: BadgeCheck, title: 'Digital Marketing Operations & Supply Chain', accent: 'bg-[#fce7f3] text-[#9d1658]' },
 ];
