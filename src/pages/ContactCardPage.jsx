@@ -1,11 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { ArrowRight, MessageSquareText, PhoneCall, CalendarCheck2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ContactCardPage = () => {
-  useEffect(() => {
-    document.title = 'Contact | Nadee Senanayake';
-  }, []);
 
   return (
     <main className="px-4 py-8 md:px-8 lg:px-16">

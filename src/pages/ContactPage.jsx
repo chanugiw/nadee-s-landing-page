@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, BadgeCheck, BriefcaseBusiness, ChartNoAxesCombined, MessageSquareText, PhoneCall, Sparkles } from 'lucide-react';
 
@@ -47,9 +47,6 @@ const researchHighlights = [
 const ContactPage = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    document.title = 'Book a Consultation | Nadee Senanayake';
-  }, []);
 
   const handleGetStarted = () => {
     const target = document.getElementById('contact');

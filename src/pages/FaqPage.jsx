@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const faqs = [
   {
@@ -29,9 +29,6 @@ const faqs = [
 ];
 
 const FaqPage = () => {
-  useEffect(() => {
-    document.title = 'FAQ | Nadee Senanayake';
-  }, []);
 
   return (
     <main className="px-4 py-8 md:px-8 lg:px-16">

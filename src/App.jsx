@@ -10,10 +10,12 @@ import ResearchPage from './pages/ResearchPage';
 import ContactPage from './pages/ContactPage';
 import ContactCardPage from './pages/ContactCardPage';
 import FaqPage from './pages/FaqPage';
+import RouteSeo from './components/RouteSeo';
 
 function App() {
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden bg-[#f3f4f6] px-4 md:px-8 text-[#000000] antialiased selection:bg-[#505050] selection:text-[#FFFFFF]">
+      <RouteSeo />
       <Navbar />
 
       <Routes>

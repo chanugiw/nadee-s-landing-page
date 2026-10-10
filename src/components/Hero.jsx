@@ -3,15 +3,14 @@ import React from 'react';
 const ACCENT = '#c2185b';
 
 const Hero = () => {
-  const scrollToContact = () => {
+  const scrollToContact = (event) => {
     const contactSection = document.getElementById('contact');
 
     if (contactSection) {
+      event.preventDefault();
       contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      return;
     }
-
-    window.location.href = '/#contact';
+    // otherwise the real href ("/#contact") navigates normally
   };
 
   return (
@@ -173,14 +172,14 @@ const Hero = () => {
         </div>
 
         {/* CTA */}
-        <button
-          type="button"
+        <a
+          href="/#contact"
           onClick={scrollToContact}
           className="mt-9 inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#f4f2f4] px-6 py-4 text-[0.95rem] font-semibold uppercase tracking-[0.14em] text-[#1c1c22] transition-all duration-200 hover:-translate-y-0.5 hover:bg-white sm:mt-10 sm:py-5 sm:text-[1.05rem]"
           style={{ boxShadow: '0 0 40px rgba(194,24,91,0.45), 0 10px 30px rgba(0,0,0,0.4)' }}
         >
           Book a Consultation <span aria-hidden="true">→</span>
-        </button>
+        </a>
       </div>
     </section>
   );
