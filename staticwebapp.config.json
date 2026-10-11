@@ -30,6 +30,10 @@
     {
       "route": "/research",
       "rewrite": "/index.html"
+    },
+    {
+      "route": "/resources/*",
+      "rewrite": "/index.html"
     }
   ]
 }

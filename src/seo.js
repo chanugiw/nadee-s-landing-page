@@ -1,3 +1,5 @@
+import { resourcePages } from './resources';
+
 // Single source of truth for per-page SEO. Used by:
 //  - scripts/prerender.mjs (writes real <head> tags into each static HTML file)
 //  - src/components/RouteSeo.jsx (keeps the tags in sync on client-side navigation)
@@ -44,17 +46,27 @@ export const routeMeta = {
     description: 'Projects and experiments by Nadee Senanayake.',
     noindex: true,
   },
-  '/research': {
-    title: 'Research | Nadee Senanayake',
-    description: 'Research and publications by Nadee Senanayake.',
-    noindex: true,
-  },
   '/contact-card': {
     title: 'Contact | Nadee Senanayake',
     description:
       'Strategic consultation for businesses, organisations and brands that want better audience insight, sharper positioning and measurable digital growth.',
   },
 };
+
+// Resources section (placeholder pages: reachable, but not indexed until they have real content).
+routeMeta['/resources'] = {
+  title: 'Resources | Nadee Senanayake',
+  description:
+    'Insights, blogs, articles, research, events, case studies and white papers on brand strategy and digital marketing by Nadee Senanayake.',
+  noindex: true,
+};
+resourcePages.forEach(({ slug, name, blurb }) => {
+  routeMeta[`/resources/${slug}`] = {
+    title: `${name} | Resources | Nadee Senanayake`,
+    description: blurb,
+    noindex: true,
+  };
+});
 
 export const getMeta = (pathname) => {
   const path = pathname.length > 1 ? pathname.replace(/\/+$/, '') : pathname;

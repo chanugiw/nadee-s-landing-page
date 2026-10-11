@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { BriefcaseBusiness, FolderKanban, Home, Info, Menu, MessageSquareText, X } from 'lucide-react';
+import { BriefcaseBusiness, ChevronDown, FolderKanban, Home, Info, Menu, MessageSquareText, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { resourcePages, resourcePath } from '../resources';
 
 // Real <a href> link for normal items; a plain (non-link) element for "coming soon" items.
 const NavItem = ({ to, disabled, onNavigate, className, children }) =>
@@ -12,13 +13,15 @@ const NavItem = ({ to, disabled, onNavigate, className, children }) =>
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false); // desktop dropdown
+  const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
     { name: 'Home', route: '/', icon: Home },
     { name: 'About', route: '/about', icon: Info },
     { name: 'Consultation', route: '/contact', icon: MessageSquareText },
-    { name: 'Research', route: '#', icon: FolderKanban, comingSoon: true },
+    { name: 'Resources', route: '/resources', icon: FolderKanban, children: resourcePages },
     { name: 'FAQ', route: '/faq', icon: BriefcaseBusiness },
   ];
 
@@ -32,7 +35,11 @@ const Navbar = () => {
     }
   }, [location]);
 
-  const closeMenu = () => setIsOpen(false);
+  const closeMenu = () => {
+    setIsOpen(false);
+    setResourcesOpen(false);
+    setMobileResourcesOpen(false);
+  };
 
   // Logo is a real link to "/". When already on the home page, scroll to the top instead.
   const goHome = (event) => {
@@ -65,6 +72,50 @@ const Navbar = () => {
           {navLinks.map((link) => {
             const Icon = link.icon;
             const isDisabled = link.comingSoon;
+
+            if (link.children) {
+              return (
+                <div
+                  key={link.name}
+                  className="relative"
+                  onMouseEnter={() => setResourcesOpen(true)}
+                  onMouseLeave={() => setResourcesOpen(false)}
+                  onBlur={(e) => {
+                    if (!e.currentTarget.contains(e.relatedTarget)) setResourcesOpen(false);
+                  }}
+                >
+                  <Link
+                    to={link.route}
+                    onClick={closeMenu}
+                    aria-haspopup="menu"
+                    aria-expanded={resourcesOpen}
+                    className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#e5e7eb] transition-colors hover:text-[#d9a6b4]"
+                  >
+                    <Icon size={12} className="opacity-80" />
+                    <span>{link.name}</span>
+                    <ChevronDown size={12} className={`opacity-80 transition-transform ${resourcesOpen ? 'rotate-180' : ''}`} />
+                  </Link>
+                  {resourcesOpen && (
+                    <div className="absolute left-1/2 top-full z-50 -translate-x-1/2 pt-4">
+                      <ul role="menu" className="min-w-[220px] rounded-2xl border border-[#2b2b30] bg-[#0d0d0f]/95 p-2 shadow-[0_18px_35px_rgba(0,0,0,0.35)] backdrop-blur-sm">
+                        {link.children.map((child) => (
+                          <li key={child.slug} role="none">
+                            <Link
+                              role="menuitem"
+                              to={resourcePath(child.slug)}
+                              onClick={closeMenu}
+                              className="block rounded-xl px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#e5e7eb] transition-colors hover:bg-[#7A1F3D]/30 hover:text-[#f4cad8]"
+                            >
+                              {child.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              );
+            }
 
             return (
               <NavItem
@@ -109,6 +160,38 @@ const Navbar = () => {
         <div className="mx-auto mt-2 flex max-w-[1400px] flex-col items-center space-y-4 rounded-[22px] border border-[#2c2c31] bg-[#0d0d0f]/95 px-4 py-6 shadow-[0_12px_30px_rgba(0,0,0,0.35)] backdrop-blur-sm lg:hidden">
           {navLinks.map((link) => {
             const isDisabled = link.comingSoon;
+
+            if (link.children) {
+              return (
+                <div key={link.name} className="w-full">
+                  <button
+                    type="button"
+                    onClick={() => setMobileResourcesOpen((v) => !v)}
+                    aria-expanded={mobileResourcesOpen}
+                    className="flex w-full items-center justify-center gap-2 rounded-full border border-[#313136] bg-[#16171a] px-4 py-3 text-sm uppercase tracking-[0.2em] text-[#f3f4f6]"
+                  >
+                    {link.name}
+                    <ChevronDown size={14} className={`transition-transform ${mobileResourcesOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {mobileResourcesOpen && (
+                    <ul className="mt-2 space-y-2">
+                      <li>
+                        <Link to={link.route} onClick={closeMenu} className="block rounded-full border border-[#3a2b33] bg-[#1b171a] px-4 py-2.5 text-center text-xs uppercase tracking-[0.18em] text-[#f4cad8]">
+                          All Resources
+                        </Link>
+                      </li>
+                      {link.children.map((child) => (
+                        <li key={child.slug}>
+                          <Link to={resourcePath(child.slug)} onClick={closeMenu} className="block rounded-full border border-[#2c2c31] bg-[#121316] px-4 py-2.5 text-center text-xs uppercase tracking-[0.18em] text-[#e5e7eb]">
+                            {child.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              );
+            }
 
             return (
               <NavItem

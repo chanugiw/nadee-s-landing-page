@@ -8,14 +8,16 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const distDir = path.join(root, 'dist');
 const serverEntry = path.join(root, 'dist-server', 'entry-server.js');
 
-const { render, buildHeadHtml } = await import(pathToFileURL(serverEntry).href);
+const { render, buildHeadHtml, routeMeta } = await import(pathToFileURL(serverEntry).href);
 
 const template = fs.readFileSync(path.join(distDir, 'index.html'), 'utf8');
 if (!template.includes('<!--app-html-->') || !template.includes('<!--app-head-->')) {
   throw new Error('index.html is missing the <!--app-head--> / <!--app-html--> placeholders');
 }
 
-const routes = ['/', '/about', '/contact', '/faq', '/contact-card', '/experience', '/projects', '/research'];
+const routes = ['/', '/about', '/contact', '/faq', '/contact-card', '/experience', '/projects'];
+// Resources hub + sub-pages come from routeMeta so they stay in sync with src/resources.js
+routes.push(...Object.keys(routeMeta).filter((r) => r.startsWith('/resources')));
 
 for (const route of routes) {
   const html = template
@@ -24,6 +26,7 @@ for (const route of routes) {
 
   // "/" -> dist/index.html, "/about" -> dist/about.html (served at /about via cleanUrls)
   const file = route === '/' ? 'index.html' : `${route.slice(1)}.html`;
+  fs.mkdirSync(path.dirname(path.join(distDir, file)), { recursive: true });
   fs.writeFileSync(path.join(distDir, file), html);
   console.log(`prerendered ${route.padEnd(14)} -> dist/${file} (${(html.length / 1024).toFixed(1)} kB)`);
 }

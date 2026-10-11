@@ -1,12 +1,12 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import AboutPage from './pages/AboutPage';
 import ExperiencePage from './pages/ExperiencePage';
 import ProjectsPage from './pages/ProjectsPage';
-import ResearchPage from './pages/ResearchPage';
+import ResourcePage from './pages/ResourcePage';
 import ContactPage from './pages/ContactPage';
 import ContactCardPage from './pages/ContactCardPage';
 import FaqPage from './pages/FaqPage';
@@ -23,7 +23,9 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/experience" element={<ExperiencePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/research" element={<ResearchPage />} />
+        <Route path="/resources" element={<ResourcePage />} />
+        <Route path="/resources/:slug" element={<ResourcePage />} />
+        <Route path="/research" element={<Navigate to="/resources/research" replace />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/contact-card" element={<ContactCardPage />} />
         <Route path="/faq" element={<FaqPage />} />
